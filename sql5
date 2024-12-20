@@ -1,0 +1,9 @@
+-- Finding students who are enrolled in more than 1 course
+SELECT FirstName, LastName
+FROM Students
+WHERE StudentID IN (
+    SELECT StudentID
+    FROM Courses
+    GROUP BY StudentID
+    HAVING COUNT(CourseID) > 1
+);

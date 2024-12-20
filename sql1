@@ -1,0 +1,14 @@
+-- Creating a database
+CREATE DATABASE SchoolDB;
+
+-- Switching to the created database
+USE SchoolDB;
+
+-- Creating a table for students
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    EnrollmentDate DATE
+);

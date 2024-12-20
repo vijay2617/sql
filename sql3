@@ -1,0 +1,5 @@
+-- Selecting all data from the Students table
+SELECT * FROM Students;
+
+-- Selecting specific columns
+SELECT FirstName, LastName, Age FROM Students;

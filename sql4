@@ -1,0 +1,19 @@
+-- Creating another table for student courses
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- Inserting data into Courses table
+INSERT INTO Courses (CourseID, CourseName, StudentID)
+VALUES 
+(101, 'Math 101', 1),
+(102, 'English 102', 1),
+(103, 'Science 103', 2);
+
+-- Querying data from both Students and Courses using INNER JOIN
+SELECT Students.FirstName, Students.LastName, Courses.CourseName
+FROM Students
+INNER JOIN Courses ON Students.StudentID = Courses.StudentID;
